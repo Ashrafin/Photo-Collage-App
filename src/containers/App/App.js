@@ -35,13 +35,13 @@ class App extends Component {
           masonryInit = new Masonry(gridContainer, {
             itemSelector: '.grid-item'
           });
-          masonryInit.on('layoutComplete', function() {
-            // console.log(items.length);
-            masonryInit.layout();
-          });
+          // masonryInit.on('layoutComplete', function() {
+          //   // console.log(items.length);
+          //   masonryInit.layout();
+          // });
           masonryInit.layout();
         });
-      }, 400);
+      }, 600);
       window.onscroll = () => {
         let findElem = document.getElementById('navSearch');
         if (window.scrollY > 1) {
@@ -90,12 +90,13 @@ class App extends Component {
           masonryInit = new Masonry(gridContainer, {
             itemSelector: '.grid-item'
           });
-          masonryInit.on('layoutComplete', function(items) {
-            console.log(items.length);
-          });
+          // masonryInit.on('layoutComplete', function(items) {
+          //   // console.log(items.length);
+          //   masonryInit.layout();
+          // });
           masonryInit.layout();
         });
-      }, 400);
+      }, 600);
     });
   }
 
