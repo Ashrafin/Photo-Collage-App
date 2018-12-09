@@ -1,0 +1,106 @@
+// search input
+.form-control.search-input
+	display: inline-block
+	max-width: 300px
+	padding: .875rem 1.0875
+	font-size: .85rem
+	border-radius: 0
+	border-top-left-radius: 20px
+	border-bottom-left-radius: 20px
+	box-shadow: none !important
+	&::placeholder
+		color: #b2b2b2
+	&:focus
+		border: 1px solid #7c8083
+
+// search button
+.btn.search-btn
+	display: inline-block
+	min-width: 80px
+	min-height: 38px
+	font-size: .85rem
+	vertical-align: top
+	border: none
+	outline: none
+	border-radius: 0
+	border-top-right-radius: 20px
+	border-bottom-right-radius: 20px
+	box-shadow: none !important
+	&:disabled:hover
+		cursor: not-allowed
+
+// grid-container
+.grid
+	height: auto !important
+	// grid item
+	.grid-item
+		float: left
+		// image wrapper
+		.image-wrapper
+			position: relative
+			background-color: #000
+			overflow: hidden
+			cursor: pointer
+			&:hover
+				// image-wrapper:hover .item
+				.image
+					opacity: 0.4
+					transform: scale(1.1)
+				// image-wrapper:hover .name-wrapper
+				.name-wrapper
+					opacity: 1
+					transition: all .2s linear
+					&:hover
+						text-decoration: none
+						background-color: #fff
+						border-radius: 20px
+						padding: 3px 10px
+						text-align: center
+						// image-wrapper:hover .name-wrapper:hover .name
+						.name
+							color: black
+					.name
+						opacity: 1
+				// image-wrapper:hover .react-blueimp-thumbnail
+				.react-blueimp-thumbnails
+					a
+						img
+							opacity: 0.1
+							transform: scale(1.1)
+			// image
+			.image
+				width: 100%
+				height: 100%
+				transition: all .45s linear
+			// blueimp wrapper
+			.react-blueimp-thumbnails
+				width: 100%
+				position: absolute
+				top: 0
+				a
+					display: block
+					img
+						width: 100%
+						height: 100%
+						transition: all .45s linear
+			// blueimp controls
+			.blueimp-gallery-controls
+				.title, .prev, .next, .close, .play-pause
+					display: none
+			// blueimp backdrop
+			.blueimp-gallery
+				background: #000
+			// name wrapper
+			.name-wrapper
+				position: absolute
+				bottom: 10px
+				left: 10px
+				display: block
+				opacity: 0
+				.name
+					font-size: .9rem
+					font-weight: 400
+					color: #fff
+					opacity: 0
+					transition: all .45s linear
+

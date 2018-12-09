@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './containers/App/App';
 import * as serviceWorker from './serviceWorker';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'blueimp-gallery/css/blueimp-gallery.min.css';
+import './index.sass';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
