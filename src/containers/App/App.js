@@ -42,6 +42,14 @@ class App extends Component {
           masonryInit.layout();
         });
       }, 400);
+      window.onscroll = () => {
+        let findElem = document.getElementById('navSearch');
+        if (window.scrollY > 1) {
+          findElem.setAttribute('style', 'box-shadow: 0 4px 5px 0 rgba(0,0,0,0.10), 0 1px 10px 0 rgba(0,0,0,0.08), 0 2px 4px -1px rgba(0,0,0,0.03);transition: all .15s linear;');
+        } else {
+          findElem.removeAttribute('style');
+        }
+      }
     });
   }
 
@@ -94,13 +102,16 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid px-0">
-        <div className="row m-0 fixed-top bg-white">
+        <div id="navSearch" className="row m-0 fixed-top bg-white">
           <form onSubmit={this.searchImage} className="col-12 px-2 py-3 text-center">
             <input onChange={event => this.setState({text: event.target.value, disabled: this.checkDisabled(event.target.value)})} className="form-control search-input righteous" type="search" placeholder="Search Images" />
             <button className="btn btn-dark search-btn righteous" disabled={this.state.disabled} type="submit">Search</button>
           </form>
+          <div className="col-12 px-2 text-center">
+            <p style={{fontSize: '.75rem'}} className="text-muted">Powered by <a href="https://www.pexels.com/">Pexels</a></p>
+          </div>
         </div>
-        <div style={{paddingTop: '60px'}} className="row m-0">
+        <div style={{paddingTop: '95px'}} className="row m-0">
           <div className="col-12 p-0 grid">
             {this.state.photos.map(photo => (
               <Photo
