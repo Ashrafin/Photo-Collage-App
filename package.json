@@ -3,17 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.18.0",
-    "blueimp-gallery": "^2.33.0",
-    "bootstrap": "^4.1.3",
+    "axios": "^0.19.2",
+    "blueimp-gallery": "^2.36.0",
+    "bootstrap": "^4.4.1",
+    "gsap": "^3.2.4",
     "imagesloaded": "^4.1.4",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "masonry-layout": "^4.2.2",
-    "node-sass": "^4.10.0",
-    "popper.js": "^1.14.6",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1",
+    "node-sass": "^4.13.1",
+    "popper.js": "^1.16.1",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-scripts": "^3.4.0",
     "reactive-blueimp-gallery": "^0.2.0"
   },
   "scripts": {
@@ -30,5 +31,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "resolutions": {
+    "acorn": "^7.1.1"
+  }
 }
